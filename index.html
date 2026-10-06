@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="contenedor header">
+
+        <div class="logo">
+            MI TIENDA
+        </div>
+
+        <input 
+            type="text" 
+            id="buscador"
+            class="buscador"
+            placeholder="Buscar productos..."
+        >
+
+        <div class="cuenta">
+            Mi cuenta
+        </div>
+
+    </div>
+
+    <nav>
+        <div class="contenedor">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#productos">Ofertas</a></li>
+                <li><a href="#carrito">Mis compras</a></li>
+                <li>
+                    <a href="#carrito">
+                        Carrito (<span id="contadorCarrito">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<main>
+
+    <!-- INICIO -->
+    <section id="inicio" class="contenedor hero">
+
+        <div class="hero-text">
+            <h1>Encuentra tu estilo</h1>
+
+            <p>
+                Encuentra ropa, accesorios y productos
+                para todos los estilos.
+            </p>
+
+            <a href="#productos" class="boton">
+                Ver productos
+            </a>
+        </div>
+
+        <div class="imagen">
+            <!-- CAMBIA ESTA DIRECCIÓN -->
+            <img 
+                src="lojo.jpg"
+                alt="Imagen principal"
+            >
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias" class="contenedor">
+
+        <h2 class="titulo">Categorías</h2>
+
+        <div class="categorias">
+
+            <div class="categoria">
+                <div class="icono">
+                    <img 
+                        src="camisas.jpg"
+                        alt="Camisas"
+                    >
+                </div>
+                <h3>Camisas</h3>
+            </div>
+
+            <div class="categoria">
+                <div class="icono">
+                    <img 
+                        src="pantalones.jpg"
+                        alt="Pantalones"
+                    >
+                </div>
+                <h3>Pantalones</h3>
+            </div>
+
+            <div class="categoria">
+                <div class="icono">
+                    <img 
+                        src="zapatos.jpg"
+                        alt="Zapatos"
+                    >
+                </div>
+                <h3>Zapatos</h3>
+            </div>
+
+            <div class="categoria">
+                <div class="icono">
+                    <img 
+                        src="accesorios.jpg"
+                        alt="Accesorios"
+                    >
+                </div>
+                <h3>Accesorios</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="contenedor">
+
+        <h2 class="titulo">Productos destacados</h2>
+
+        <div class="productos" id="listaProductos">
+
+
+            <!-- PRODUCTO 1 -->
+            <article 
+                class="producto"
+                data-nombre="Playera básica"
+            >
+
+                <div class="producto-img">
+                    <img 
+                        src="basica.jpg"
+                        alt="Playera básica"
+                    >
+                </div>
+
+                <h3>Playera básica</h3>
+
+                <p>Playera de algodón.</p>
+
+                <div class="precio">
+                    $250
+                </div>
+
+                <button 
+                    class="verProducto"
+                    data-producto="Playera básica"
+                    data-precio="250"
+                >
+                    Ver producto
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCTO 2 -->
+            <article 
+                class="producto"
+                data-nombre="Pantalón de mezclilla"
+            >
+
+                <div class="producto-img">
+                    <img 
+                        src="mezcliya.jpg"
+                        alt="Pantalón de mezclilla"
+                    >
+                </div>
+
+                <h3>Pantalón de mezclilla</h3>
+
+                <p>Pantalón de mezclilla clásico.</p>
+
+                <div class="precio">
+                    $500
+                </div>
+
+                <button 
+                    class="verProducto"
+                    data-producto="Pantalón de mezclilla"
+                    data-precio="500"
+                >
+                    Ver producto
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCTO 3 -->
+            <article 
+                class="producto"
+                data-nombre="Sudadera"
+            >
+
+                <div class="producto-img">
+                    <img 
+                        src="sudaderas.jpg"
+                        alt="Sudadera"
+                    >
+                </div>
+
+                <h3>Sudadera</h3>
+
+                <p>Sudadera cómoda para cualquier ocasión.</p>
+
+                <div class="precio">
+                    $450
+                </div>
+
+                <button 
+                    class="verProducto"
+                    data-producto="Sudadera"
+                    data-precio="450"
+                >
+                    Ver producto
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCTO 4 -->
+            <article 
+                class="producto"
+                data-nombre="Tenis deportivos"
+            >
+
+                <div class="producto-img">
+                    <img 
+                        src="tenis.jpg"
+                        alt="Tenis deportivos"
+                    >
+                </div>
+
+                <h3>Tenis deportivos</h3>
+
+                <p>Tenis para uso diario.</p>
+
+                <div class="precio">
+                    $1500
+                </div>
+
+                <button 
+                    class="verProducto"
+                    data-producto="Tenis deportivos"
+                    data-precio="1500"
+                >
+                    Ver producto
+                </button>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- DETALLE DEL PRODUCTO -->
+    <section id="detalle" class="contenedor detalle">
+
+        <div class="detalle-img">
+
+            <img 
+                id="imagenDetalle"
+                src="https://TU-DIRECCION-PLAYERA.jpg"
+                alt="Producto seleccionado"
+            >
+
+        </div>
+
+
+        <div class="detalle-info">
+
+            <h2 id="detalleTitulo">
+                Playera básica
+            </h2>
+
+            <p>
+                ⭐⭐⭐⭐⭐
+            </p>
+
+            <div 
+                class="precio-grande"
+                id="detallePrecio"
+            >
+                $250
+            </div>
+
+            <p id="detalleDescripcion">
+                Playera cómoda y de buena calidad
+                para uso diario.
+            </p>
+
+
+            <div class="opciones">
+
+                <label>
+                    Color:
+                </label>
+
+                <select id="color">
+
+                    <option>Negro</option>
+                    <option>Blanco</option>
+                    <option>Azul</option>
+
+                </select>
+
+
+                <label>
+                    Talla:
+                </label>
+
+                <select id="talla">
+
+                    <option>CH</option>
+                    <option>M</option>
+                    <option>G</option>
+                    <option>XL</option>
+
+                </select>
+
+            </div>
+
+
+            <button 
+                id="agregarCarrito"
+                class="carrito-btn"
+            >
+                Agregar al carrito
+            </button>
+
+            <p>
+                ❤️ Agregar a favoritos
+            </p>
+
+            <p>
+                🚚 Envío disponible
+            </p>
+
+            <p>
+                🔒 Compra protegida
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMACIÓN -->
+    <section class="contenedor info">
+
+        <div class="info-box">
+            <h3>🚚 Envío</h3>
+            <p>Envíos a todo México.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🔒 Compra segura</h3>
+            <p>Compra protegida.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>💳 Pago seguro</h3>
+            <p>Pago protegido.</p>
+        </div>
+
+    </section>
+
+
+    <!-- CARRITO -->
+    <section 
+        id="carrito"
+        class="contenedor carrito"
+    >
+
+        <div class="productos-carrito">
+
+            <h2>Carrito de compras</h2>
+
+            <div id="listaCarrito">
+
+                <p>
+                    Tu carrito está vacío.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="resumen">
+
+            <h2>Resumen</h2>
+
+            <div class="fila">
+                <span>Subtotal:</span>
+                <span id="subtotal">$0</span>
+            </div>
+
+            <div class="fila">
+                <span>Envío:</span>
+                <span id="envio">$0</span>
+            </div>
+
+            <div class="fila total">
+                <span>Total:</span>
+                <span id="total">$0</span>
+            </div>
+
+            <button 
+                id="procederPago"
+                class="pagar"
+            >
+                Proceder al pago
+            </button>
+
+            <p class="seguro">
+                🔒 Compra segura y protegida.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        Mi Tienda de Ropa © 2026
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
